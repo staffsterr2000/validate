@@ -1,16 +1,17 @@
 "use strict";
 
-var prevScript= document.getElementsByTagName("script");
-
-if(prevScript.id != "first"){
-  prevScript[0].parentNode.removeChild(prevScript[0]);
+var thisScript= document.getElementsByTagName("script");
+if(thisScript[0].id != "first") {
+  var thisScript= document.getElementById("nextMajor");
+  thisScript.parentNode.removeChild(thisScript.previousSibling);
 }
 
 function include(url) {
-  let script= document.createElement("script");
-  script.src= url;
-  document.getElementsByTagName("body")[0].appendChild(script);
-  // document.body.appendChild(script);
+  var includeScript= document.createElement("script");
+  includeScript.src= url;
+  includeScript.id= "nextMinor";
+  document.getElementsByTagName("body")[0].appendChild(includeScript);
+  // document.body.appendChild(includeScript);
 }
 
 do {

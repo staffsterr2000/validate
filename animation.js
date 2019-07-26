@@ -1,7 +1,10 @@
 "use strict";
 
-let prevScript= document.getElementById("script");
-prevScript[0].parentNode.removeChild(prevScript[0]);
+// var prevScript= document.getElementById("script");
+// prevScript[0].parentNode.removeChild(prevScript[0]);
+
+var thisScript= document.getElementById("nextMinor");
+thisScript.parentNode.removeChild(thisScript.previousSibling);
 
 var square= document.getElementById("square");
 var box= document.getElementById("box");
@@ -42,15 +45,16 @@ function move() {
             break;
             }
         case 4: {
-            let answer= confirm("Another circle?");
+            var answer= confirm("Another circle?");
             if(answer == true)
                 level= 0;
             else
                 clearInterval(call);
                 square.style.visibility= "hidden";
-                let nextScript= document.createElement("script");
-                script.src= "choice.js";
-                document.getElementsByTagName("body")[0].appendChild(script);
+                var inputScript= document.createElement("script");
+                inputScript.src= "choice.js";
+                inputScript.id= "nextMajor";
+                document.getElementsByTagName("body")[0].appendChild(inputScript);
         }
     }
 }
