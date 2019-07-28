@@ -7,19 +7,21 @@
   </head>
   <body>
 
-    <button onclick="next()">Next</button>
+    <button id="slideButton" onclick="next()">Next</button>
     <img id="slideImage" alt="here is image slider">
-    <button onclick="prev()">Prev</button>
+    <button id="slideButton" onclick="prev()">Prev</button>
 
     <div id="square">
       <div id="box"> </div>
     </div>
 
-    <script id="slider" src="slider.js"> </script>
-    <script id="time" src="time.js"> </script>
-    <script id="button" src="button.js"> </script>
-    <script id="form" src="form.js"> </script>
-    <script id="animation" src="animation.js"> </script>
-    <!-- <script id="first" src="choice.js"> </script> -->
+    <button id="random" onclick="button()">Random (1-100)</button>
+
+    <script id="slider" src="scripts/slider.js"> </script>
+    <script id="time" src="scripts/time.js"> </script>
+    <script id="button" src="scripts/button.js"> </script>
+    <script id="animation" src="scripts/animation.js"> </script>
+    <script id="form" src="scripts/form.js"> </script>
+    <!-- <script id="first" src="scripts/choice.js"> </script> -->
   </body>
 </html>
